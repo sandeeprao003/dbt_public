@@ -1,0 +1,13 @@
+matillion_dbt:
+  outputs:
+    dev:
+      account: dattoinc-dwh
+      database: development
+      password: 6n0TIRtsA3bGP38zIDKr
+      role: DEV_TRANSFORMER
+      schema: AZURE_MASTER
+      threads: 1
+      type: snowflake
+      user: SNOW_SRVC_ACCT_DEV
+      warehouse: DEV_TRANSFORM_WH
+  target: dev
