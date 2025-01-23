@@ -1,0 +1,739 @@
+[0m15:34:04.329587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A20F1120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A3F8D480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A3F8D2A0>]}
+
+
+============================== 15:34:04.335680 | ffa7964e-d860-418a-b6d0-a230adcafe52 ==============================
+[0m15:34:04.335680 [info ] [MainThread]: Running with dbt=1.9.1
+[0m15:34:04.337614 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\sandeep.udupi\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\dbt_workspace\\matillion_dbt\\logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:34:04.857051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ffa7964e-d860-418a-b6d0-a230adcafe52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A48B4970>]}
+[0m15:34:04.921696 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ffa7964e-d860-418a-b6d0-a230adcafe52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A3F9A800>]}
+[0m15:34:04.924583 [info ] [MainThread]: Registered adapter: snowflake=1.9.0
+[0m15:34:05.314640 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m15:34:06.707449 [debug] [MainThread]: Partial parsing enabled: 3 files deleted, 1 files added, 0 files changed.
+[0m15:34:06.707449 [debug] [MainThread]: Partial parsing: added file: matillion_dbt://models\azure_agent_snapshot.sql
+[0m15:34:06.708450 [debug] [MainThread]: Partial parsing: deleted file: matillion_dbt://models\example\my_first_dbt_model.sql
+[0m15:34:06.709451 [debug] [MainThread]: Partial parsing: deleted file: matillion_dbt://models\example\my_second_dbt_model.sql
+[0m15:34:06.965433 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.matillion_dbt.example
+[0m15:34:06.970356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ffa7964e-d860-418a-b6d0-a230adcafe52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A3F8D930>]}
+[0m15:34:07.037414 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m15:34:07.054999 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m15:34:07.129024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ffa7964e-d860-418a-b6d0-a230adcafe52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A5EA2620>]}
+[0m15:34:07.130071 [info ] [MainThread]: Found 1 model, 470 macros
+[0m15:34:07.131018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ffa7964e-d860-418a-b6d0-a230adcafe52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A5EA2680>]}
+[0m15:34:07.133102 [info ] [MainThread]: 
+[0m15:34:07.133102 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:34:07.134022 [info ] [MainThread]: 
+[0m15:34:07.135109 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:34:07.138022 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development'
+[0m15:34:10.366728 [debug] [ThreadPool]: Using snowflake connection "list_development"
+[0m15:34:10.368734 [debug] [ThreadPool]: On list_development: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development"} */
+show terse schemas in database development
+    limit 10000
+[0m15:34:10.369734 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:34:12.601878 [debug] [ThreadPool]: SQL status: SUCCESS 183 in 2.232 seconds
+[0m15:34:12.612657 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development_AZURE_MASTER'
+[0m15:34:12.625351 [debug] [ThreadPool]: Using snowflake connection "list_development_AZURE_MASTER"
+[0m15:34:12.626334 [debug] [ThreadPool]: On list_development_AZURE_MASTER: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development_AZURE_MASTER"} */
+show objects in development.AZURE_MASTER limit 10000;
+[0m15:34:12.626334 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:34:14.350898 [debug] [ThreadPool]: SQL status: SUCCESS 48 in 1.725 seconds
+[0m15:34:14.361034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ffa7964e-d860-418a-b6d0-a230adcafe52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A64AE8C0>]}
+[0m15:34:14.364539 [debug] [Thread-1 (]: Began running node model.matillion_dbt.azure_agent_snapshot
+[0m15:34:14.365547 [info ] [Thread-1 (]: 1 of 1 START sql view model AZURE_MASTER.azure_agent_snapshot .................. [RUN]
+[0m15:34:14.365547 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.matillion_dbt.azure_agent_snapshot'
+[0m15:34:14.367018 [debug] [Thread-1 (]: Began compiling node model.matillion_dbt.azure_agent_snapshot
+[0m15:34:14.376185 [debug] [Thread-1 (]: Writing injected SQL for node "model.matillion_dbt.azure_agent_snapshot"
+[0m15:34:14.379185 [debug] [Thread-1 (]: Began executing node model.matillion_dbt.azure_agent_snapshot
+[0m15:34:14.404876 [debug] [Thread-1 (]: Dropping relation "DEVELOPMENT"."AZURE_MASTER"."AZURE_AGENT_SNAPSHOT" because it is of type table
+[0m15:34:14.417925 [debug] [Thread-1 (]: Applying DROP to: "DEVELOPMENT"."AZURE_MASTER"."AZURE_AGENT_SNAPSHOT"
+[0m15:34:14.426031 [debug] [Thread-1 (]: Using snowflake connection "model.matillion_dbt.azure_agent_snapshot"
+[0m15:34:14.427026 [debug] [Thread-1 (]: On model.matillion_dbt.azure_agent_snapshot: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "node_id": "model.matillion_dbt.azure_agent_snapshot"} */
+drop table if exists "DEVELOPMENT"."AZURE_MASTER"."AZURE_AGENT_SNAPSHOT" cascade
+[0m15:34:14.427026 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:34:15.834275 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.407 seconds
+[0m15:34:15.847137 [debug] [Thread-1 (]: Writing runtime sql for node "model.matillion_dbt.azure_agent_snapshot"
+[0m15:34:15.851008 [debug] [Thread-1 (]: Using snowflake connection "model.matillion_dbt.azure_agent_snapshot"
+[0m15:34:15.852022 [debug] [Thread-1 (]: On model.matillion_dbt.azure_agent_snapshot: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "node_id": "model.matillion_dbt.azure_agent_snapshot"} */
+create or replace   view development.AZURE_MASTER.azure_agent_snapshot
+  
+   as (
+    with CTE_AZURE_AGENT_SNAPSHOT AS (
+    select * from AZURE_MASTER.AZURE_AGENT_SNAPSHOT
+    where TS_DATE = DATE(current_timestamp)-1
+)
+
+SELECT * FROM CTE_AZURE_AGENT_SNAPSHOT;
+[0m15:34:16.229310 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b98f32-0412-9fee-004c-5d03a760ea2a
+[0m15:34:16.229310 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 9 at position 38 unexpected ';'.
+[0m15:34:16.252218 [debug] [Thread-1 (]: Database Error in model azure_agent_snapshot (models\azure_agent_snapshot.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 9 at position 38 unexpected ';'.
+  compiled code at target\run\matillion_dbt\models\azure_agent_snapshot.sql
+[0m15:34:16.255272 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ffa7964e-d860-418a-b6d0-a230adcafe52', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A6606AA0>]}
+[0m15:34:16.256728 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model AZURE_MASTER.azure_agent_snapshot ......... [[31mERROR[0m in 1.89s]
+[0m15:34:16.257336 [debug] [Thread-1 (]: Finished running node model.matillion_dbt.azure_agent_snapshot
+[0m15:34:16.258344 [debug] [Thread-4 (]: Marking all children of 'model.matillion_dbt.azure_agent_snapshot' to be skipped because of status 'error'.  Reason: Database Error in model azure_agent_snapshot (models\azure_agent_snapshot.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 9 at position 38 unexpected ';'.
+  compiled code at target\run\matillion_dbt\models\azure_agent_snapshot.sql.
+[0m15:34:16.259446 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:34:16.260348 [debug] [MainThread]: Connection 'list_development' was left open.
+[0m15:34:16.260855 [debug] [MainThread]: On list_development: Close
+[0m15:34:16.658134 [debug] [MainThread]: Connection 'list_development_AZURE_MASTER' was left open.
+[0m15:34:16.659127 [debug] [MainThread]: On list_development_AZURE_MASTER: Close
+[0m15:34:17.044162 [debug] [MainThread]: Connection 'model.matillion_dbt.azure_agent_snapshot' was left open.
+[0m15:34:17.045158 [debug] [MainThread]: On model.matillion_dbt.azure_agent_snapshot: Close
+[0m15:34:17.420432 [info ] [MainThread]: 
+[0m15:34:17.422499 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 10.29 seconds (10.29s).
+[0m15:34:17.423043 [debug] [MainThread]: Command end result
+[0m15:34:17.445465 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m15:34:17.447470 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m15:34:17.456872 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_workspace\matillion_dbt\target\run_results.json
+[0m15:34:17.456872 [info ] [MainThread]: 
+[0m15:34:17.458878 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:34:17.459882 [info ] [MainThread]: 
+[0m15:34:17.460387 [error] [MainThread]:   Database Error in model azure_agent_snapshot (models\azure_agent_snapshot.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 9 at position 38 unexpected ';'.
+  compiled code at target\run\matillion_dbt\models\azure_agent_snapshot.sql
+[0m15:34:17.461396 [info ] [MainThread]: 
+[0m15:34:17.462487 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m15:34:17.464393 [debug] [MainThread]: Command `dbt run` failed at 15:34:17.464393 after 13.25 seconds
+[0m15:34:17.464393 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A20F1120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A1C4CCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A65C67A0>]}
+[0m15:34:17.465393 [debug] [MainThread]: Flushing usage events
+[0m15:34:18.796645 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:35:01.098230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002EFA0E21090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002EFA2C9D1E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002EFA2C9D000>]}
+
+
+============================== 15:35:01.103235 | a968571e-c89d-4280-acf3-55007f7885d1 ==============================
+[0m15:35:01.103235 [info ] [MainThread]: Running with dbt=1.9.1
+[0m15:35:01.104240 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\sandeep.udupi\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\dbt_workspace\\matillion_dbt\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:35:01.640767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a968571e-c89d-4280-acf3-55007f7885d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002EF9F6035B0>]}
+[0m15:35:01.695764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a968571e-c89d-4280-acf3-55007f7885d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002EFA2789C30>]}
+[0m15:35:01.697909 [info ] [MainThread]: Registered adapter: snowflake=1.9.0
+[0m15:35:01.935454 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m15:35:02.071341 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:35:02.071341 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:35:02.077341 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.matillion_dbt.example
+[0m15:35:02.104822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a968571e-c89d-4280-acf3-55007f7885d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002EFA3AA0130>]}
+[0m15:35:02.176964 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m15:35:02.181967 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m15:35:02.219402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a968571e-c89d-4280-acf3-55007f7885d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002EFA3A86470>]}
+[0m15:35:02.220510 [info ] [MainThread]: Found 1 model, 470 macros
+[0m15:35:02.221401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a968571e-c89d-4280-acf3-55007f7885d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002EFA3A863E0>]}
+[0m15:35:02.223403 [info ] [MainThread]: 
+[0m15:35:02.224411 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:35:02.225403 [info ] [MainThread]: 
+[0m15:35:02.227614 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:35:02.229627 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development'
+[0m15:35:02.360928 [debug] [ThreadPool]: Using snowflake connection "list_development"
+[0m15:35:02.360928 [debug] [ThreadPool]: On list_development: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development"} */
+show terse schemas in database development
+    limit 10000
+[0m15:35:02.361847 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:35:04.599979 [debug] [ThreadPool]: SQL status: SUCCESS 183 in 2.238 seconds
+[0m15:35:04.605900 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development_AZURE_MASTER'
+[0m15:35:04.617012 [debug] [ThreadPool]: Using snowflake connection "list_development_AZURE_MASTER"
+[0m15:35:04.618008 [debug] [ThreadPool]: On list_development_AZURE_MASTER: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development_AZURE_MASTER"} */
+show objects in development.AZURE_MASTER limit 10000;
+[0m15:35:04.618008 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:35:06.517066 [debug] [ThreadPool]: SQL status: SUCCESS 47 in 1.899 seconds
+[0m15:35:06.528975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a968571e-c89d-4280-acf3-55007f7885d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002EFA508A5C0>]}
+[0m15:35:06.531461 [debug] [Thread-1 (]: Began running node model.matillion_dbt.azure_agent_snapshot
+[0m15:35:06.531461 [info ] [Thread-1 (]: 1 of 1 START sql view model AZURE_MASTER.azure_agent_snapshot .................. [RUN]
+[0m15:35:06.532739 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.matillion_dbt.azure_agent_snapshot'
+[0m15:35:06.533745 [debug] [Thread-1 (]: Began compiling node model.matillion_dbt.azure_agent_snapshot
+[0m15:35:06.539353 [debug] [Thread-1 (]: Writing injected SQL for node "model.matillion_dbt.azure_agent_snapshot"
+[0m15:35:06.541362 [debug] [Thread-1 (]: Began executing node model.matillion_dbt.azure_agent_snapshot
+[0m15:35:06.572749 [debug] [Thread-1 (]: Writing runtime sql for node "model.matillion_dbt.azure_agent_snapshot"
+[0m15:35:06.574651 [debug] [Thread-1 (]: Using snowflake connection "model.matillion_dbt.azure_agent_snapshot"
+[0m15:35:06.574651 [debug] [Thread-1 (]: On model.matillion_dbt.azure_agent_snapshot: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "node_id": "model.matillion_dbt.azure_agent_snapshot"} */
+create or replace   view development.AZURE_MASTER.azure_agent_snapshot
+  
+   as (
+    with CTE_AZURE_AGENT_SNAPSHOT AS (
+    select * from AZURE_MASTER.AZURE_AGENT_SNAPSHOT
+    where TS_DATE = DATE(current_timestamp)-1
+)
+
+SELECT * FROM CTE_AZURE_AGENT_SNAPSHOT;
+[0m15:35:06.575655 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:35:07.965757 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b98f33-0412-9863-004c-5d03a761306a
+[0m15:35:07.965757 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 9 at position 38 unexpected ';'.
+[0m15:35:07.967752 [debug] [Thread-1 (]: Database Error in model azure_agent_snapshot (models\azure_agent_snapshot.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 9 at position 38 unexpected ';'.
+  compiled code at target\run\matillion_dbt\models\azure_agent_snapshot.sql
+[0m15:35:07.970957 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a968571e-c89d-4280-acf3-55007f7885d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002EFA0C59AB0>]}
+[0m15:35:07.971952 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model AZURE_MASTER.azure_agent_snapshot ......... [[31mERROR[0m in 1.44s]
+[0m15:35:07.973336 [debug] [Thread-1 (]: Finished running node model.matillion_dbt.azure_agent_snapshot
+[0m15:35:07.974344 [debug] [Thread-4 (]: Marking all children of 'model.matillion_dbt.azure_agent_snapshot' to be skipped because of status 'error'.  Reason: Database Error in model azure_agent_snapshot (models\azure_agent_snapshot.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 9 at position 38 unexpected ';'.
+  compiled code at target\run\matillion_dbt\models\azure_agent_snapshot.sql.
+[0m15:35:07.975864 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:35:07.976876 [debug] [MainThread]: Connection 'list_development' was left open.
+[0m15:35:07.976876 [debug] [MainThread]: On list_development: Close
+[0m15:35:08.377458 [debug] [MainThread]: Connection 'list_development_AZURE_MASTER' was left open.
+[0m15:35:08.378577 [debug] [MainThread]: On list_development_AZURE_MASTER: Close
+[0m15:35:08.763792 [debug] [MainThread]: Connection 'model.matillion_dbt.azure_agent_snapshot' was left open.
+[0m15:35:08.765803 [debug] [MainThread]: On model.matillion_dbt.azure_agent_snapshot: Close
+[0m15:35:09.159296 [info ] [MainThread]: 
+[0m15:35:09.161299 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 6.93 seconds (6.93s).
+[0m15:35:09.163295 [debug] [MainThread]: Command end result
+[0m15:35:09.189393 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m15:35:09.191294 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m15:35:09.199296 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_workspace\matillion_dbt\target\run_results.json
+[0m15:35:09.199296 [info ] [MainThread]: 
+[0m15:35:09.201296 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:35:09.203388 [info ] [MainThread]: 
+[0m15:35:09.204295 [error] [MainThread]:   Database Error in model azure_agent_snapshot (models\azure_agent_snapshot.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 9 at position 38 unexpected ';'.
+  compiled code at target\run\matillion_dbt\models\azure_agent_snapshot.sql
+[0m15:35:09.205296 [info ] [MainThread]: 
+[0m15:35:09.206318 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m15:35:09.207502 [debug] [MainThread]: Command `dbt run` failed at 15:35:09.207502 after 8.19 seconds
+[0m15:35:09.208508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002EFA0E21090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002EFA3980850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002EFA10E2230>]}
+[0m15:35:09.208508 [debug] [MainThread]: Flushing usage events
+[0m15:35:10.413628 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:35:27.155495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001869173D1E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186935E9330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186935E9150>]}
+
+
+============================== 15:35:27.160583 | f5d650ca-2f0f-46a4-bbda-8b5c47138641 ==============================
+[0m15:35:27.160583 [info ] [MainThread]: Running with dbt=1.9.1
+[0m15:35:27.161621 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\sandeep.udupi\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\dbt_workspace\\matillion_dbt\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:35:27.604115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f5d650ca-2f0f-46a4-bbda-8b5c47138641', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186935DC700>]}
+[0m15:35:27.661028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f5d650ca-2f0f-46a4-bbda-8b5c47138641', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186930AA3E0>]}
+[0m15:35:27.663024 [info ] [MainThread]: Registered adapter: snowflake=1.9.0
+[0m15:35:27.890244 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m15:35:28.027190 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m15:35:28.028247 [debug] [MainThread]: Partial parsing: updated file: matillion_dbt://models\azure_agent_snapshot.sql
+[0m15:35:28.299781 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.matillion_dbt.example
+[0m15:35:28.303780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f5d650ca-2f0f-46a4-bbda-8b5c47138641', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186953FE290>]}
+[0m15:35:28.375037 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m15:35:28.379013 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m15:35:28.416347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f5d650ca-2f0f-46a4-bbda-8b5c47138641', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186943BF5E0>]}
+[0m15:35:28.416347 [info ] [MainThread]: Found 1 model, 470 macros
+[0m15:35:28.417672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f5d650ca-2f0f-46a4-bbda-8b5c47138641', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018693F2B6D0>]}
+[0m15:35:28.419768 [info ] [MainThread]: 
+[0m15:35:28.420680 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:35:28.420680 [info ] [MainThread]: 
+[0m15:35:28.421690 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:35:28.424682 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development'
+[0m15:35:28.505509 [debug] [ThreadPool]: Using snowflake connection "list_development"
+[0m15:35:28.506514 [debug] [ThreadPool]: On list_development: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development"} */
+show terse schemas in database development
+    limit 10000
+[0m15:35:28.507404 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:35:30.823276 [debug] [ThreadPool]: SQL status: SUCCESS 183 in 2.317 seconds
+[0m15:35:30.830221 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development_AZURE_MASTER'
+[0m15:35:30.840827 [debug] [ThreadPool]: Using snowflake connection "list_development_AZURE_MASTER"
+[0m15:35:30.841786 [debug] [ThreadPool]: On list_development_AZURE_MASTER: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development_AZURE_MASTER"} */
+show objects in development.AZURE_MASTER limit 10000;
+[0m15:35:30.841786 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:35:32.510480 [debug] [ThreadPool]: SQL status: SUCCESS 47 in 1.669 seconds
+[0m15:35:32.520470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f5d650ca-2f0f-46a4-bbda-8b5c47138641', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018693F9DC90>]}
+[0m15:35:32.523472 [debug] [Thread-1 (]: Began running node model.matillion_dbt.azure_agent_snapshot
+[0m15:35:32.524478 [info ] [Thread-1 (]: 1 of 1 START sql view model AZURE_MASTER.azure_agent_snapshot .................. [RUN]
+[0m15:35:32.525470 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.matillion_dbt.azure_agent_snapshot'
+[0m15:35:32.525470 [debug] [Thread-1 (]: Began compiling node model.matillion_dbt.azure_agent_snapshot
+[0m15:35:32.531471 [debug] [Thread-1 (]: Writing injected SQL for node "model.matillion_dbt.azure_agent_snapshot"
+[0m15:35:32.533477 [debug] [Thread-1 (]: Began executing node model.matillion_dbt.azure_agent_snapshot
+[0m15:35:32.568512 [debug] [Thread-1 (]: Writing runtime sql for node "model.matillion_dbt.azure_agent_snapshot"
+[0m15:35:32.570420 [debug] [Thread-1 (]: Using snowflake connection "model.matillion_dbt.azure_agent_snapshot"
+[0m15:35:32.570420 [debug] [Thread-1 (]: On model.matillion_dbt.azure_agent_snapshot: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "node_id": "model.matillion_dbt.azure_agent_snapshot"} */
+create or replace   view development.AZURE_MASTER.azure_agent_snapshot
+  
+   as (
+    with CTE_AZURE_AGENT_SNAPSHOT AS (
+    select * from AZURE_MASTER.AZURE_AGENT_SNAPSHOT
+    where TS_DATE = DATE(current_timestamp)-1
+)
+
+SELECT * FROM CTE_AZURE_AGENT_SNAPSHOT
+  );
+[0m15:35:32.571421 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:35:34.013265 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b98f33-0412-9fee-004c-5d03a7611612
+[0m15:35:34.014304 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'DEVELOPMENT.AZURE_MASTER.AZURE_AGENT_SNAPSHOT' does not exist or not authorized.
+[0m15:35:34.016227 [debug] [Thread-1 (]: Database Error in model azure_agent_snapshot (models\azure_agent_snapshot.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'DEVELOPMENT.AZURE_MASTER.AZURE_AGENT_SNAPSHOT' does not exist or not authorized.
+  compiled code at target\run\matillion_dbt\models\azure_agent_snapshot.sql
+[0m15:35:34.019199 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f5d650ca-2f0f-46a4-bbda-8b5c47138641', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018695BEB370>]}
+[0m15:35:34.020199 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model AZURE_MASTER.azure_agent_snapshot ......... [[31mERROR[0m in 1.49s]
+[0m15:35:34.021204 [debug] [Thread-1 (]: Finished running node model.matillion_dbt.azure_agent_snapshot
+[0m15:35:34.022198 [debug] [Thread-4 (]: Marking all children of 'model.matillion_dbt.azure_agent_snapshot' to be skipped because of status 'error'.  Reason: Database Error in model azure_agent_snapshot (models\azure_agent_snapshot.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'DEVELOPMENT.AZURE_MASTER.AZURE_AGENT_SNAPSHOT' does not exist or not authorized.
+  compiled code at target\run\matillion_dbt\models\azure_agent_snapshot.sql.
+[0m15:35:34.023196 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:35:34.024197 [debug] [MainThread]: Connection 'list_development' was left open.
+[0m15:35:34.024197 [debug] [MainThread]: On list_development: Close
+[0m15:35:34.389075 [debug] [MainThread]: Connection 'list_development_AZURE_MASTER' was left open.
+[0m15:35:34.390065 [debug] [MainThread]: On list_development_AZURE_MASTER: Close
+[0m15:35:34.750249 [debug] [MainThread]: Connection 'model.matillion_dbt.azure_agent_snapshot' was left open.
+[0m15:35:34.751257 [debug] [MainThread]: On model.matillion_dbt.azure_agent_snapshot: Close
+[0m15:35:35.125584 [info ] [MainThread]: 
+[0m15:35:35.126585 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 6.70 seconds (6.70s).
+[0m15:35:35.128979 [debug] [MainThread]: Command end result
+[0m15:35:35.149379 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m15:35:35.151706 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m15:35:35.158233 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_workspace\matillion_dbt\target\run_results.json
+[0m15:35:35.159232 [info ] [MainThread]: 
+[0m15:35:35.160355 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:35:35.160355 [info ] [MainThread]: 
+[0m15:35:35.161360 [error] [MainThread]:   Database Error in model azure_agent_snapshot (models\azure_agent_snapshot.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'DEVELOPMENT.AZURE_MASTER.AZURE_AGENT_SNAPSHOT' does not exist or not authorized.
+  compiled code at target\run\matillion_dbt\models\azure_agent_snapshot.sql
+[0m15:35:35.162360 [info ] [MainThread]: 
+[0m15:35:35.162360 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m15:35:35.163780 [debug] [MainThread]: Command `dbt run` failed at 15:35:35.163780 after 8.09 seconds
+[0m15:35:35.163780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001869173D1E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186954D0040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186929D2110>]}
+[0m15:35:35.164795 [debug] [MainThread]: Flushing usage events
+[0m15:35:36.060831 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:43:43.201523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B558D1E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B7439330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B7439150>]}
+
+
+============================== 15:43:43.206529 | 78eff7aa-c71e-43e1-9d3f-f32c95dc78d0 ==============================
+[0m15:43:43.206529 [info ] [MainThread]: Running with dbt=1.9.1
+[0m15:43:43.207529 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\dbt_workspace\\matillion_dbt\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\sandeep.udupi\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:43:43.705074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '78eff7aa-c71e-43e1-9d3f-f32c95dc78d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B742D2D0>]}
+[0m15:43:43.762460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '78eff7aa-c71e-43e1-9d3f-f32c95dc78d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B6EFA3E0>]}
+[0m15:43:43.764982 [info ] [MainThread]: Registered adapter: snowflake=1.9.0
+[0m15:43:44.175038 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m15:43:44.254802 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m15:43:44.255734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '78eff7aa-c71e-43e1-9d3f-f32c95dc78d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B6F34F40>]}
+[0m15:43:46.498301 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.matillion_dbt.example
+[0m15:43:46.504114 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '78eff7aa-c71e-43e1-9d3f-f32c95dc78d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B9300130>]}
+[0m15:43:46.580992 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m15:43:46.598855 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m15:43:46.646290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '78eff7aa-c71e-43e1-9d3f-f32c95dc78d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B9305630>]}
+[0m15:43:46.647226 [info ] [MainThread]: Found 1 model, 470 macros
+[0m15:43:46.648222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '78eff7aa-c71e-43e1-9d3f-f32c95dc78d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B9305660>]}
+[0m15:43:46.649297 [info ] [MainThread]: 
+[0m15:43:46.651221 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:43:46.652258 [info ] [MainThread]: 
+[0m15:43:46.654240 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:43:46.657226 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development'
+[0m15:43:49.616328 [debug] [ThreadPool]: Using snowflake connection "list_development"
+[0m15:43:49.616328 [debug] [ThreadPool]: On list_development: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development"} */
+show terse schemas in database development
+    limit 10000
+[0m15:43:49.617328 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:43:51.838029 [debug] [ThreadPool]: SQL status: SUCCESS 183 in 2.220 seconds
+[0m15:43:51.844798 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development_AZURE_MASTER'
+[0m15:43:51.899804 [debug] [ThreadPool]: Using snowflake connection "list_development_AZURE_MASTER"
+[0m15:43:51.900804 [debug] [ThreadPool]: On list_development_AZURE_MASTER: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development_AZURE_MASTER"} */
+show objects in development.AZURE_MASTER limit 10000;
+[0m15:43:51.900804 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:43:53.254932 [debug] [ThreadPool]: SQL status: SUCCESS 47 in 1.353 seconds
+[0m15:43:53.264929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '78eff7aa-c71e-43e1-9d3f-f32c95dc78d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B99E9D80>]}
+[0m15:43:53.267932 [debug] [Thread-1 (]: Began running node model.matillion_dbt.azure_agent_snapshot
+[0m15:43:53.267932 [info ] [Thread-1 (]: 1 of 1 START sql view model AZURE_MASTER.azure_agent_snapshot .................. [RUN]
+[0m15:43:53.268936 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.matillion_dbt.azure_agent_snapshot'
+[0m15:43:53.270238 [debug] [Thread-1 (]: Began compiling node model.matillion_dbt.azure_agent_snapshot
+[0m15:43:53.276361 [debug] [Thread-1 (]: Writing injected SQL for node "model.matillion_dbt.azure_agent_snapshot"
+[0m15:43:53.277362 [debug] [Thread-1 (]: Began executing node model.matillion_dbt.azure_agent_snapshot
+[0m15:43:53.308942 [debug] [Thread-1 (]: Writing runtime sql for node "model.matillion_dbt.azure_agent_snapshot"
+[0m15:43:53.310942 [debug] [Thread-1 (]: Using snowflake connection "model.matillion_dbt.azure_agent_snapshot"
+[0m15:43:53.311943 [debug] [Thread-1 (]: On model.matillion_dbt.azure_agent_snapshot: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "node_id": "model.matillion_dbt.azure_agent_snapshot"} */
+create or replace   view development.AZURE_MASTER.azure_agent_snapshot
+  
+   as (
+    with CTE_AZURE_AGENT_SNAPSHOT AS (
+    select * from AZURE_MASTER.AZURE_AGENT_SNAPSHOT
+    where TS_DATE = DATE(current_timestamp)-1
+)
+
+SELECT * FROM CTE_AZURE_AGENT_SNAPSHOT
+  );
+[0m15:43:53.313030 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:43:54.947077 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b98f3b-0412-9e57-004c-5d03a761511e
+[0m15:43:54.948080 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'DEVELOPMENT.AZURE_MASTER.AZURE_AGENT_SNAPSHOT' does not exist or not authorized.
+[0m15:43:54.960577 [debug] [Thread-1 (]: Database Error in model azure_agent_snapshot (models\azure_agent_snapshot.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'DEVELOPMENT.AZURE_MASTER.AZURE_AGENT_SNAPSHOT' does not exist or not authorized.
+  compiled code at target\run\matillion_dbt\models\azure_agent_snapshot.sql
+[0m15:43:54.962632 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '78eff7aa-c71e-43e1-9d3f-f32c95dc78d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B53CDC90>]}
+[0m15:43:54.963641 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model AZURE_MASTER.azure_agent_snapshot ......... [[31mERROR[0m in 1.69s]
+[0m15:43:54.964641 [debug] [Thread-1 (]: Finished running node model.matillion_dbt.azure_agent_snapshot
+[0m15:43:54.965642 [debug] [Thread-4 (]: Marking all children of 'model.matillion_dbt.azure_agent_snapshot' to be skipped because of status 'error'.  Reason: Database Error in model azure_agent_snapshot (models\azure_agent_snapshot.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'DEVELOPMENT.AZURE_MASTER.AZURE_AGENT_SNAPSHOT' does not exist or not authorized.
+  compiled code at target\run\matillion_dbt\models\azure_agent_snapshot.sql.
+[0m15:43:54.967641 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:43:54.967641 [debug] [MainThread]: Connection 'list_development' was left open.
+[0m15:43:54.968640 [debug] [MainThread]: On list_development: Close
+[0m15:43:55.366918 [debug] [MainThread]: Connection 'list_development_AZURE_MASTER' was left open.
+[0m15:43:55.367922 [debug] [MainThread]: On list_development_AZURE_MASTER: Close
+[0m15:43:55.756737 [debug] [MainThread]: Connection 'model.matillion_dbt.azure_agent_snapshot' was left open.
+[0m15:43:55.757737 [debug] [MainThread]: On model.matillion_dbt.azure_agent_snapshot: Close
+[0m15:43:56.139763 [info ] [MainThread]: 
+[0m15:43:56.141772 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 9.49 seconds (9.49s).
+[0m15:43:56.142771 [debug] [MainThread]: Command end result
+[0m15:43:56.168890 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m15:43:56.171981 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m15:43:56.178890 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_workspace\matillion_dbt\target\run_results.json
+[0m15:43:56.179889 [info ] [MainThread]: 
+[0m15:43:56.180884 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:43:56.181888 [info ] [MainThread]: 
+[0m15:43:56.182683 [error] [MainThread]:   Database Error in model azure_agent_snapshot (models\azure_agent_snapshot.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'DEVELOPMENT.AZURE_MASTER.AZURE_AGENT_SNAPSHOT' does not exist or not authorized.
+  compiled code at target\run\matillion_dbt\models\azure_agent_snapshot.sql
+[0m15:43:56.183666 [info ] [MainThread]: 
+[0m15:43:56.185673 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m15:43:56.187679 [debug] [MainThread]: Command `dbt run` failed at 15:43:56.186673 after 13.09 seconds
+[0m15:43:56.187679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B558D1E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B9308370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000228B92AA650>]}
+[0m15:43:56.187679 [debug] [MainThread]: Flushing usage events
+[0m15:43:57.230580 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:12:09.095136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A5FF74D1B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A5816314E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A581631300>]}
+
+
+============================== 16:12:09.099157 | 8ba46317-39b9-4b12-93b9-464ab8264753 ==============================
+[0m16:12:09.099157 [info ] [MainThread]: Running with dbt=1.9.1
+[0m16:12:09.101157 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\sandeep.udupi\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\dbt_workspace\\matillion_dbt\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:12:09.587627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8ba46317-39b9-4b12-93b9-464ab8264753', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A581168910>]}
+[0m16:12:09.646616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8ba46317-39b9-4b12-93b9-464ab8264753', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A5FF9EA470>]}
+[0m16:12:09.648500 [info ] [MainThread]: Registered adapter: snowflake=1.9.0
+[0m16:12:10.039064 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m16:12:11.561556 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m16:12:11.562558 [debug] [MainThread]: Partial parsing: updated file: matillion_dbt://models\azure_agent_snapshot.sql
+[0m16:12:11.819758 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.matillion_dbt.example
+[0m16:12:11.824976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8ba46317-39b9-4b12-93b9-464ab8264753', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A582413D30>]}
+[0m16:12:11.898694 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m16:12:11.914626 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m16:12:11.955211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8ba46317-39b9-4b12-93b9-464ab8264753', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A5820E6140>]}
+[0m16:12:11.957216 [info ] [MainThread]: Found 1 model, 470 macros
+[0m16:12:11.981248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8ba46317-39b9-4b12-93b9-464ab8264753', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A5820E6260>]}
+[0m16:12:11.984766 [info ] [MainThread]: 
+[0m16:12:11.985767 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:12:11.986800 [info ] [MainThread]: 
+[0m16:12:11.988768 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m16:12:11.992768 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development'
+[0m16:12:15.105028 [debug] [ThreadPool]: Using snowflake connection "list_development"
+[0m16:12:15.105028 [debug] [ThreadPool]: On list_development: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development"} */
+show terse schemas in database development
+    limit 10000
+[0m16:12:15.106028 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:12:17.057254 [debug] [ThreadPool]: SQL status: SUCCESS 183 in 1.952 seconds
+[0m16:12:17.062257 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development_AZURE_MASTER'
+[0m16:12:17.074260 [debug] [ThreadPool]: Using snowflake connection "list_development_AZURE_MASTER"
+[0m16:12:17.074260 [debug] [ThreadPool]: On list_development_AZURE_MASTER: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development_AZURE_MASTER"} */
+show objects in development.AZURE_MASTER limit 10000;
+[0m16:12:17.075272 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:12:18.584927 [debug] [ThreadPool]: SQL status: SUCCESS 47 in 1.509 seconds
+[0m16:12:18.599323 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8ba46317-39b9-4b12-93b9-464ab8264753', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A5821897B0>]}
+[0m16:12:18.603324 [debug] [Thread-1 (]: Began running node model.matillion_dbt.azure_agent_snapshot
+[0m16:12:18.603324 [info ] [Thread-1 (]: 1 of 1 START sql view model AZURE_MASTER.azure_agent_snapshot .................. [RUN]
+[0m16:12:18.604501 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.matillion_dbt.azure_agent_snapshot'
+[0m16:12:18.605513 [debug] [Thread-1 (]: Began compiling node model.matillion_dbt.azure_agent_snapshot
+[0m16:12:18.611512 [debug] [Thread-1 (]: Writing injected SQL for node "model.matillion_dbt.azure_agent_snapshot"
+[0m16:12:18.612513 [debug] [Thread-1 (]: Began executing node model.matillion_dbt.azure_agent_snapshot
+[0m16:12:18.637609 [debug] [Thread-1 (]: Writing runtime sql for node "model.matillion_dbt.azure_agent_snapshot"
+[0m16:12:18.639517 [debug] [Thread-1 (]: Using snowflake connection "model.matillion_dbt.azure_agent_snapshot"
+[0m16:12:18.641526 [debug] [Thread-1 (]: On model.matillion_dbt.azure_agent_snapshot: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "node_id": "model.matillion_dbt.azure_agent_snapshot"} */
+create or replace   view development.AZURE_MASTER.azure_agent_snapshot
+  
+   as (
+    with CTE_AZURE_SNAPSHOT AS (
+    select * from AZURE_MASTER.AZURE_SNAPSHOT
+    where TS_DATE = DATE(current_timestamp)-1
+)
+
+SELECT * FROM CTE_AZURE_SNAPSHOT
+  );
+[0m16:12:18.642509 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:12:20.532047 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.889 seconds
+[0m16:12:20.558209 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8ba46317-39b9-4b12-93b9-464ab8264753', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A5FDF2FF70>]}
+[0m16:12:20.559477 [info ] [Thread-1 (]: 1 of 1 OK created sql view model AZURE_MASTER.azure_agent_snapshot ............. [[32mSUCCESS 1[0m in 1.95s]
+[0m16:12:20.560488 [debug] [Thread-1 (]: Finished running node model.matillion_dbt.azure_agent_snapshot
+[0m16:12:20.561483 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:12:20.561483 [debug] [MainThread]: Connection 'list_development' was left open.
+[0m16:12:20.562484 [debug] [MainThread]: On list_development: Close
+[0m16:12:20.996623 [debug] [MainThread]: Connection 'list_development_AZURE_MASTER' was left open.
+[0m16:12:20.997632 [debug] [MainThread]: On list_development_AZURE_MASTER: Close
+[0m16:12:21.428480 [debug] [MainThread]: Connection 'model.matillion_dbt.azure_agent_snapshot' was left open.
+[0m16:12:21.428480 [debug] [MainThread]: On model.matillion_dbt.azure_agent_snapshot: Close
+[0m16:12:21.854016 [info ] [MainThread]: 
+[0m16:12:21.855937 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 9.87 seconds (9.87s).
+[0m16:12:21.858938 [debug] [MainThread]: Command end result
+[0m16:12:21.899911 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m16:12:21.902800 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m16:12:21.910796 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_workspace\matillion_dbt\target\run_results.json
+[0m16:12:21.911797 [info ] [MainThread]: 
+[0m16:12:21.912801 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:12:21.914814 [info ] [MainThread]: 
+[0m16:12:21.916795 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m16:12:21.918696 [debug] [MainThread]: Command `dbt run` succeeded at 16:12:21.917616 after 12.95 seconds
+[0m16:12:21.918696 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A5FF74D1B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A5FF9CF370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A58356DD80>]}
+[0m16:12:21.919701 [debug] [MainThread]: Flushing usage events
+[0m16:12:22.942036 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:23:05.227405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016BE3421180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016BE52C54E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016BE52C5300>]}
+
+
+============================== 16:23:05.232416 | 8a8413a1-1dfe-42e3-8de1-7a0b2e09cfa6 ==============================
+[0m16:23:05.232416 [info ] [MainThread]: Running with dbt=1.9.1
+[0m16:23:05.233025 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\sandeep.udupi\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'C:\\dbt_workspace\\matillion_dbt\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m16:23:05.708690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8a8413a1-1dfe-42e3-8de1-7a0b2e09cfa6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016BE1BFF6D0>]}
+[0m16:23:05.767788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8a8413a1-1dfe-42e3-8de1-7a0b2e09cfa6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016BE4DDB400>]}
+[0m16:23:05.769796 [info ] [MainThread]: Registered adapter: snowflake=1.9.0
+[0m16:23:05.998519 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m16:23:06.130658 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 0 files changed.
+[0m16:23:06.131615 [debug] [MainThread]: Partial parsing: added file: matillion_dbt://models\vw_azure_snapshot.sql
+[0m16:23:06.131615 [debug] [MainThread]: Partial parsing: deleted file: matillion_dbt://models\azure_agent_snapshot.sql
+[0m16:23:06.399378 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.matillion_dbt.example
+[0m16:23:06.405361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8a8413a1-1dfe-42e3-8de1-7a0b2e09cfa6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016BE6088490>]}
+[0m16:23:06.481477 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m16:23:06.486000 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m16:23:06.531900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8a8413a1-1dfe-42e3-8de1-7a0b2e09cfa6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016BE60B2710>]}
+[0m16:23:06.532903 [info ] [MainThread]: Found 1 model, 470 macros
+[0m16:23:06.533902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a8413a1-1dfe-42e3-8de1-7a0b2e09cfa6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016BE60B01C0>]}
+[0m16:23:06.536001 [info ] [MainThread]: 
+[0m16:23:06.536898 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:23:06.537898 [info ] [MainThread]: 
+[0m16:23:06.539005 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m16:23:06.542359 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development'
+[0m16:23:06.643870 [debug] [ThreadPool]: Using snowflake connection "list_development"
+[0m16:23:06.644940 [debug] [ThreadPool]: On list_development: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development"} */
+show terse schemas in database development
+    limit 10000
+[0m16:23:06.644940 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:23:08.965046 [debug] [ThreadPool]: SQL status: SUCCESS 183 in 2.320 seconds
+[0m16:23:08.973236 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development_AZURE_MASTER'
+[0m16:23:08.990519 [debug] [ThreadPool]: Using snowflake connection "list_development_AZURE_MASTER"
+[0m16:23:08.991531 [debug] [ThreadPool]: On list_development_AZURE_MASTER: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development_AZURE_MASTER"} */
+show objects in development.AZURE_MASTER limit 10000;
+[0m16:23:08.992537 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:23:10.589210 [debug] [ThreadPool]: SQL status: SUCCESS 47 in 1.597 seconds
+[0m16:23:10.603333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a8413a1-1dfe-42e3-8de1-7a0b2e09cfa6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016BE7113640>]}
+[0m16:23:10.606842 [debug] [Thread-1 (]: Began running node model.matillion_dbt.vw_azure_snapshot
+[0m16:23:10.607842 [info ] [Thread-1 (]: 1 of 1 START sql view model AZURE_MASTER.vw_azure_snapshot ..................... [RUN]
+[0m16:23:10.608846 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.matillion_dbt.vw_azure_snapshot'
+[0m16:23:10.608846 [debug] [Thread-1 (]: Began compiling node model.matillion_dbt.vw_azure_snapshot
+[0m16:23:10.614847 [debug] [Thread-1 (]: Writing injected SQL for node "model.matillion_dbt.vw_azure_snapshot"
+[0m16:23:10.615846 [debug] [Thread-1 (]: Began executing node model.matillion_dbt.vw_azure_snapshot
+[0m16:23:10.647411 [debug] [Thread-1 (]: Writing runtime sql for node "model.matillion_dbt.vw_azure_snapshot"
+[0m16:23:10.650409 [debug] [Thread-1 (]: Using snowflake connection "model.matillion_dbt.vw_azure_snapshot"
+[0m16:23:10.651502 [debug] [Thread-1 (]: On model.matillion_dbt.vw_azure_snapshot: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "node_id": "model.matillion_dbt.vw_azure_snapshot"} */
+create or replace   view development.AZURE_MASTER.vw_azure_snapshot
+  
+   as (
+    with CTE_AZURE_SNAPSHOT AS (
+    select * from AZURE_MASTER.AZURE_SNAPSHOT
+    where TS_DATE = DATE(current_timestamp)-1
+)
+
+SELECT * FROM CTE_AZURE_SNAPSHOT
+  );
+[0m16:23:10.651502 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:23:12.399022 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.747 seconds
+[0m16:23:12.426007 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a8413a1-1dfe-42e3-8de1-7a0b2e09cfa6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016BE1BFFF70>]}
+[0m16:23:12.427009 [info ] [Thread-1 (]: 1 of 1 OK created sql view model AZURE_MASTER.vw_azure_snapshot ................ [[32mSUCCESS 1[0m in 1.82s]
+[0m16:23:12.428005 [debug] [Thread-1 (]: Finished running node model.matillion_dbt.vw_azure_snapshot
+[0m16:23:12.430224 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:23:12.430224 [debug] [MainThread]: Connection 'list_development' was left open.
+[0m16:23:12.431230 [debug] [MainThread]: On list_development: Close
+[0m16:23:12.828604 [debug] [MainThread]: Connection 'list_development_AZURE_MASTER' was left open.
+[0m16:23:12.829616 [debug] [MainThread]: On list_development_AZURE_MASTER: Close
+[0m16:23:13.206506 [debug] [MainThread]: Connection 'model.matillion_dbt.vw_azure_snapshot' was left open.
+[0m16:23:13.207595 [debug] [MainThread]: On model.matillion_dbt.vw_azure_snapshot: Close
+[0m16:23:13.608001 [info ] [MainThread]: 
+[0m16:23:13.610016 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 7.07 seconds (7.07s).
+[0m16:23:13.611563 [debug] [MainThread]: Command end result
+[0m16:23:13.640629 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m16:23:13.646896 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m16:23:13.654891 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_workspace\matillion_dbt\target\run_results.json
+[0m16:23:13.657456 [info ] [MainThread]: 
+[0m16:23:13.661464 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:23:13.662464 [info ] [MainThread]: 
+[0m16:23:13.664476 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m16:23:13.666464 [debug] [MainThread]: Command `dbt run` succeeded at 16:23:13.665514 after 8.52 seconds
+[0m16:23:13.666464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016BE3421180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016BE70E3940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016BE4698250>]}
+[0m16:23:13.667604 [debug] [MainThread]: Flushing usage events
+[0m16:23:17.880050 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:10:07.464884 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200C64510C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200C82F93C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200C82F91E0>]}
+
+
+============================== 11:10:07.472952 | a1bb1ce2-2d5b-43f2-b5ef-5b94484579c6 ==============================
+[0m11:10:07.472952 [info ] [MainThread]: Running with dbt=1.9.1
+[0m11:10:07.474942 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\sandeep.udupi\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'C:\\dbt_workspace\\matillion_dbt\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m11:10:08.341571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a1bb1ce2-2d5b-43f2-b5ef-5b94484579c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200C4C2F5E0>]}
+[0m11:10:08.401937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a1bb1ce2-2d5b-43f2-b5ef-5b94484579c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200C779F6D0>]}
+[0m11:10:08.404386 [info ] [MainThread]: Registered adapter: snowflake=1.9.0
+[0m11:10:08.845259 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m11:10:10.572256 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:10:10.572256 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:10:10.578772 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.matillion_dbt.example
+[0m11:10:10.601877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a1bb1ce2-2d5b-43f2-b5ef-5b94484579c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200C90D0130>]}
+[0m11:10:10.687747 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m11:10:10.708391 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m11:10:10.765019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a1bb1ce2-2d5b-43f2-b5ef-5b94484579c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200C90B6440>]}
+[0m11:10:10.767018 [info ] [MainThread]: Found 1 model, 470 macros
+[0m11:10:10.768045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a1bb1ce2-2d5b-43f2-b5ef-5b94484579c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200C90B63E0>]}
+[0m11:10:10.770046 [info ] [MainThread]: 
+[0m11:10:10.771055 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:10:10.771055 [info ] [MainThread]: 
+[0m11:10:10.772063 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:10:10.775045 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development'
+[0m11:10:14.978600 [debug] [ThreadPool]: Using snowflake connection "list_development"
+[0m11:10:14.979603 [debug] [ThreadPool]: On list_development: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development"} */
+show terse schemas in database development
+    limit 10000
+[0m11:10:14.979603 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:10:23.355883 [debug] [ThreadPool]: SQL status: SUCCESS 184 in 8.376 seconds
+[0m11:10:23.363714 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development_AZURE_MASTER'
+[0m11:10:23.376443 [debug] [ThreadPool]: Using snowflake connection "list_development_AZURE_MASTER"
+[0m11:10:23.377513 [debug] [ThreadPool]: On list_development_AZURE_MASTER: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development_AZURE_MASTER"} */
+show objects in development.AZURE_MASTER limit 10000;
+[0m11:10:23.377513 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:10:26.755282 [debug] [ThreadPool]: SQL status: SUCCESS 49 in 3.377 seconds
+[0m11:10:26.766921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a1bb1ce2-2d5b-43f2-b5ef-5b94484579c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200CA6BA620>]}
+[0m11:10:26.771968 [debug] [Thread-1 (]: Began running node model.matillion_dbt.vw_azure_snapshot
+[0m11:10:26.772969 [info ] [Thread-1 (]: 1 of 1 START sql view model AZURE_MASTER.vw_azure_snapshot ..................... [RUN]
+[0m11:10:26.773986 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.matillion_dbt.vw_azure_snapshot'
+[0m11:10:26.774970 [debug] [Thread-1 (]: Began compiling node model.matillion_dbt.vw_azure_snapshot
+[0m11:10:26.782514 [debug] [Thread-1 (]: Writing injected SQL for node "model.matillion_dbt.vw_azure_snapshot"
+[0m11:10:26.783487 [debug] [Thread-1 (]: Began executing node model.matillion_dbt.vw_azure_snapshot
+[0m11:10:26.813857 [debug] [Thread-1 (]: Writing runtime sql for node "model.matillion_dbt.vw_azure_snapshot"
+[0m11:10:26.816454 [debug] [Thread-1 (]: Using snowflake connection "model.matillion_dbt.vw_azure_snapshot"
+[0m11:10:26.817780 [debug] [Thread-1 (]: On model.matillion_dbt.vw_azure_snapshot: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "node_id": "model.matillion_dbt.vw_azure_snapshot"} */
+create or replace   view development.AZURE_MASTER.vw_azure_snapshot
+  
+   as (
+    with CTE_AZURE_SNAPSHOT AS (
+    select * from AZURE_MASTER.AZURE_SNAPSHOT
+    where TS_DATE = DATE(current_timestamp)-1
+)
+
+SELECT * FROM CTE_AZURE_SNAPSHOT
+  );
+[0m11:10:26.820192 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:10:31.656794 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 4.837 seconds
+[0m11:10:31.686468 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a1bb1ce2-2d5b-43f2-b5ef-5b94484579c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200C4C2FEB0>]}
+[0m11:10:31.687475 [info ] [Thread-1 (]: 1 of 1 OK created sql view model AZURE_MASTER.vw_azure_snapshot ................ [[32mSUCCESS 1[0m in 4.91s]
+[0m11:10:31.688507 [debug] [Thread-1 (]: Finished running node model.matillion_dbt.vw_azure_snapshot
+[0m11:10:31.690469 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:10:31.690469 [debug] [MainThread]: Connection 'list_development' was left open.
+[0m11:10:31.691557 [debug] [MainThread]: On list_development: Close
+[0m11:10:32.782078 [debug] [MainThread]: Connection 'list_development_AZURE_MASTER' was left open.
+[0m11:10:32.783077 [debug] [MainThread]: On list_development_AZURE_MASTER: Close
+[0m11:10:33.914531 [debug] [MainThread]: Connection 'model.matillion_dbt.vw_azure_snapshot' was left open.
+[0m11:10:33.915428 [debug] [MainThread]: On model.matillion_dbt.vw_azure_snapshot: Close
+[0m11:10:34.980292 [info ] [MainThread]: 
+[0m11:10:34.981287 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 24.21 seconds (24.21s).
+[0m11:10:34.986866 [debug] [MainThread]: Command end result
+[0m11:10:35.024996 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\matillion_dbt\target\manifest.json
+[0m11:10:35.029020 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\matillion_dbt\target\semantic_manifest.json
+[0m11:10:35.045323 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_workspace\matillion_dbt\target\run_results.json
+[0m11:10:35.048454 [info ] [MainThread]: 
+[0m11:10:35.050438 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:10:35.052455 [info ] [MainThread]: 
+[0m11:10:35.052455 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m11:10:35.053961 [debug] [MainThread]: Command `dbt run` succeeded at 11:10:35.053961 after 27.69 seconds
+[0m11:10:35.053961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200C64510C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200C5FAE020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200C6714130>]}
+[0m11:10:35.054971 [debug] [MainThread]: Flushing usage events
+[0m11:10:38.096605 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:18:21.662622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153B24AD120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153B432D2A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153B432D0C0>]}
+
+
+============================== 10:18:21.673942 | b635815b-3012-4c06-90e1-44ab026dbc4e ==============================
+[0m10:18:21.673942 [info ] [MainThread]: Running with dbt=1.9.1
+[0m10:18:21.673942 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\sandeep.udupi\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\dbt_workspace\\dbt\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:18:23.634607 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b635815b-3012-4c06-90e1-44ab026dbc4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153B4BD5C00>]}
+[0m10:18:23.696825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b635815b-3012-4c06-90e1-44ab026dbc4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153B4356830>]}
+[0m10:18:23.696825 [info ] [MainThread]: Registered adapter: snowflake=1.9.0
+[0m10:18:24.224642 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m10:18:26.358939 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:18:26.358939 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:18:26.374561 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.matillion_dbt.example
+[0m10:18:26.390189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b635815b-3012-4c06-90e1-44ab026dbc4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153B6100130>]}
+[0m10:18:26.477812 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\dbt\target\manifest.json
+[0m10:18:26.517394 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\dbt\target\semantic_manifest.json
+[0m10:18:26.566312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b635815b-3012-4c06-90e1-44ab026dbc4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153B60E6320>]}
+[0m10:18:26.574516 [info ] [MainThread]: Found 1 model, 470 macros
+[0m10:18:26.574516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b635815b-3012-4c06-90e1-44ab026dbc4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153B60E6290>]}
+[0m10:18:26.574516 [info ] [MainThread]: 
+[0m10:18:26.574516 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:18:26.574516 [info ] [MainThread]: 
+[0m10:18:26.574516 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:18:26.580523 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development'
+[0m10:18:30.279214 [debug] [ThreadPool]: Using snowflake connection "list_development"
+[0m10:18:30.279214 [debug] [ThreadPool]: On list_development: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development"} */
+show terse schemas in database development
+    limit 10000
+[0m10:18:30.279214 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:18:34.218144 [debug] [ThreadPool]: SQL status: SUCCESS 185 in 3.939 seconds
+[0m10:18:34.228256 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_development_AZURE_MASTER'
+[0m10:18:34.234265 [debug] [ThreadPool]: Using snowflake connection "list_development_AZURE_MASTER"
+[0m10:18:34.242287 [debug] [ThreadPool]: On list_development_AZURE_MASTER: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "connection_name": "list_development_AZURE_MASTER"} */
+show objects in development.AZURE_MASTER limit 10000;
+[0m10:18:34.242287 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:18:36.252843 [debug] [ThreadPool]: SQL status: SUCCESS 48 in 2.014 seconds
+[0m10:18:36.268460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b635815b-3012-4c06-90e1-44ab026dbc4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153B66BB8B0>]}
+[0m10:18:36.272173 [debug] [Thread-1 (]: Began running node model.matillion_dbt.vw_azure_snapshot
+[0m10:18:36.272173 [info ] [Thread-1 (]: 1 of 1 START sql view model AZURE_MASTER.vw_azure_snapshot ..................... [RUN]
+[0m10:18:36.272173 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.matillion_dbt.vw_azure_snapshot'
+[0m10:18:36.272173 [debug] [Thread-1 (]: Began compiling node model.matillion_dbt.vw_azure_snapshot
+[0m10:18:36.284183 [debug] [Thread-1 (]: Writing injected SQL for node "model.matillion_dbt.vw_azure_snapshot"
+[0m10:18:36.284183 [debug] [Thread-1 (]: Began executing node model.matillion_dbt.vw_azure_snapshot
+[0m10:18:36.312989 [debug] [Thread-1 (]: Writing runtime sql for node "model.matillion_dbt.vw_azure_snapshot"
+[0m10:18:36.322000 [debug] [Thread-1 (]: Using snowflake connection "model.matillion_dbt.vw_azure_snapshot"
+[0m10:18:36.322000 [debug] [Thread-1 (]: On model.matillion_dbt.vw_azure_snapshot: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "matillion_dbt", "target_name": "dev", "node_id": "model.matillion_dbt.vw_azure_snapshot"} */
+create or replace   view development.AZURE_MASTER.vw_azure_snapshot
+  
+   as (
+    with CTE_AZURE_SNAPSHOT AS (
+    select * from AZURE_MASTER.AZURE_SNAPSHOT
+    where TS_DATE = DATE(current_timestamp)-1
+)
+
+SELECT * FROM CTE_AZURE_SNAPSHOT
+  );
+[0m10:18:36.322000 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:18:38.905912 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.586 seconds
+[0m10:18:38.937703 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b635815b-3012-4c06-90e1-44ab026dbc4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153B0C8FF10>]}
+[0m10:18:38.937703 [info ] [Thread-1 (]: 1 of 1 OK created sql view model AZURE_MASTER.vw_azure_snapshot ................ [[32mSUCCESS 1[0m in 2.66s]
+[0m10:18:38.937703 [debug] [Thread-1 (]: Finished running node model.matillion_dbt.vw_azure_snapshot
+[0m10:18:38.941355 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:18:38.941355 [debug] [MainThread]: Connection 'list_development' was left open.
+[0m10:18:38.941355 [debug] [MainThread]: On list_development: Close
+[0m10:18:39.358606 [debug] [MainThread]: Connection 'list_development_AZURE_MASTER' was left open.
+[0m10:18:39.358606 [debug] [MainThread]: On list_development_AZURE_MASTER: Close
+[0m10:18:39.806642 [debug] [MainThread]: Connection 'model.matillion_dbt.vw_azure_snapshot' was left open.
+[0m10:18:39.806642 [debug] [MainThread]: On model.matillion_dbt.vw_azure_snapshot: Close
+[0m10:18:40.216697 [info ] [MainThread]: 
+[0m10:18:40.216697 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 13.64 seconds (13.64s).
+[0m10:18:40.216697 [debug] [MainThread]: Command end result
+[0m10:18:40.261075 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_workspace\dbt\target\manifest.json
+[0m10:18:40.266705 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_workspace\dbt\target\semantic_manifest.json
+[0m10:18:40.269345 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_workspace\dbt\target\run_results.json
+[0m10:18:40.269345 [info ] [MainThread]: 
+[0m10:18:40.269345 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:18:40.277722 [info ] [MainThread]: 
+[0m10:18:40.277722 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m10:18:40.277722 [debug] [MainThread]: Command `dbt run` succeeded at 10:18:40.277722 after 18.72 seconds
+[0m10:18:40.277722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153B24AD120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153B272FBE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153B4BF4BB0>]}
+[0m10:18:40.277722 [debug] [MainThread]: Flushing usage events
+[0m10:18:41.378202 [debug] [MainThread]: An error was encountered while trying to flush usage events
